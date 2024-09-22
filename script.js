@@ -23,27 +23,22 @@ function calculateResult() {
     let remarks = "";
 
     // Determine the grade and remarks based on the percentage
-    if (percentage >= 90) {
+   if (percentage >= 90) {
         grade = "A+";
         remarks = "Excellent work!";
-    }
-    if (percentage >= 80) {
+    } else if (percentage >= 80) {
         grade = "A";
         remarks = "Great job!";
-    }
-    if (percentage >= 70) {
+    } else if (percentage >= 70) {
         grade = "B+";
         remarks = "Good effort!";
-    }
-    if (percentage >= 60) {
+    } else if (percentage >= 60) {
         grade = "B";
         remarks = "Keep improving!";
-    }
-    if (percentage >= 50) {
+    } else if (percentage >= 50) {
         grade = "C";
         remarks = "You passed, but there's room for improvement.";
-    }
-    if (percentage >= 40) {
+    } else if (percentage >= 40) {
         grade = "D";
         remarks = "Just passed. Try harder next time.";
     }
