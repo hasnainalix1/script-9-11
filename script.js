@@ -27,23 +27,23 @@ function calculateResult() {
         grade = "A+";
         remarks = "Excellent work!";
     }
-    elseif (percentage >= 80) {
+    if (percentage >= 80) {
         grade = "A";
         remarks = "Great job!";
     }
-    elseif (percentage >= 70) {
+    if (percentage >= 70) {
         grade = "B+";
         remarks = "Good effort!";
     }
-    elseif (percentage >= 60) {
+    if (percentage >= 60) {
         grade = "B";
         remarks = "Keep improving!";
     }
-    elseif (percentage >= 50) {
+    if (percentage >= 50) {
         grade = "C";
         remarks = "You passed, but there's room for improvement.";
     }
-    elseif (percentage >= 40) {
+    if (percentage >= 40) {
         grade = "D";
         remarks = "Just passed. Try harder next time.";
     }
