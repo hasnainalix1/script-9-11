@@ -1,16 +1,13 @@
-let studentName = ""; // Declare studentName globally
+let studentName = "";
 
 function calculateResult() {
-    // Get the student's name if it's not already set
     if (!studentName) {
         studentName = prompt("Enter the student's name:");
     }
 
-    // Get total marks and obtained marks from the user
     const totalMarks = parseFloat(prompt("Enter the total marks:"));
     const obtainedMarks = parseFloat(prompt("Enter the obtained marks:"));
 
-    // Validate inputs
     if (isNaN(totalMarks) || isNaN(obtainedMarks)) {
         alert("Please enter valid numbers.");
         return;
@@ -21,12 +18,10 @@ function calculateResult() {
         return;
     }
 
-    // Calculate percentage
     const percentage = (obtainedMarks / totalMarks) * 100;
     let grade = "";
     let remarks = "";
 
-    // Determine the grade and remarks based on the percentage
     if (percentage >= 90) {
         grade = "A+";
         remarks = "Excellent work!";
@@ -50,7 +45,6 @@ function calculateResult() {
         remarks = "Failed. Need significant improvement.";
     }
 
-    // Display the result
     const resultBox = document.getElementById("result-box");
     resultBox.innerHTML = `
         <p><strong>Name:</strong> ${studentName}</p>
@@ -61,14 +55,11 @@ function calculateResult() {
         <p><strong>Remarks:</strong> ${remarks}</p>
     `;
 
-    // Show the change name button
     document.getElementById("change-name-btn").style.display = "inline-block";
 }
 
 function changeName() {
-    // Prompt the user for a new name
     studentName = prompt("Enter the new name:");
-    // Update the displayed name if it exists
     const resultBox = document.getElementById("result-box");
     if (resultBox.innerHTML !== "") {
         resultBox.querySelector('p').innerHTML = `<strong>Name:</strong> ${studentName}`;
